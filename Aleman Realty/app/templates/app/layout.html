@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - My Django Application</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'app/content/siteCustom.css' %}" />
+
+    <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
+</head>
+
+<body>
+    <div class="menu">
+    <div class="container-fluid">
+		<div class="navbar-header">
+			<a href="#">Get new listings emailed daily!</a>
+		</div>
+		<div>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#" ><span class="glyphicon glyphicon-phone-alt"></span> (559)  638 - 5126</a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+    <div class="container body-content">
+{% block content %}{% endblock %}
+        <hr/>
+        <footer class="container-fluid text-center foot">
+
+        <div class="copyrights">
+            <p class="white-txt">Your Site Name © 2017
+                <br><br>
+                <img class="footimg" src="https://openclipart.org/download/59293/logo-water.svg" alt="Logo">
+            </p>
+            <hr class="dark-line">
+            <a class="link" href="#">Contact Us</a>&nbsp
+            <a class="link" href="#">Privacy Policy</a>&nbsp
+            <a class="link" href="#">Terms & Conditions</a>
+            <br><br>
+            <p class="white-txt small">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare elit odio, eu imperdiet ligula ullamcorper sed.
+            </p>
+        </div>
+        </footer>
+    </div>
+
+    <script src="{% static 'app/scripts/jquery-1.10.2.js' %}"></script>
+    <script src="{% static 'app/scripts/bootstrap.js' %}"></script>
+    <script src="{% static 'app/scripts/respond.js' %}"></script>
+    <script src="{% static 'app/scripts/JavaScriptCustom.js' %}"></script>
+
+{% block scripts %}{% endblock %}
+
+</body>
+</html>
